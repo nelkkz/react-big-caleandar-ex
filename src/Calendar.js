@@ -288,6 +288,13 @@ class Calendar extends React.Component {
     onView: PropTypes.func,
 
     /**
+     * Callback fired when the `filter` value changes.
+     *
+     * @controllable date
+     */
+         onFilter: PropTypes.func,
+
+    /**
      * Callback fired when date header, or the truncated events links are clicked
      *
      */
@@ -1000,6 +1007,7 @@ class Calendar extends React.Component {
       formats: _1,
       messages: _2,
       culture: _3,
+      onFilter,
       ...props
     } = this.props
 
@@ -1026,6 +1034,7 @@ class Calendar extends React.Component {
             label={label}
             onView={this.handleViewChange}
             onNavigate={this.handleNavigate}
+            onFilter={onFilter}
             localizer={localizer}
           />
         )}
