@@ -1,6 +1,6 @@
 {
   "name": "react-big-calendar-ex",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Extends calendar project based on https://github.com/jquense/react-big-calendar.git",
   "author": {
     "name": "Nelson Zhang",
@@ -51,6 +51,7 @@
     "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/plugin-transform-runtime": "^7.18.6",
     "@babel/preset-env": "^7.18.6",
+    "@babel/plugin-proposal-private-property-in-object": "^7.18.6",
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
     "@rollup/plugin-babel": "5.3.1",

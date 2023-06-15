@@ -288,11 +288,23 @@ class Calendar extends React.Component {
     onView: PropTypes.func,
 
     /**
-     * Callback fired when the `filter` value changes.
+     * Callback fired when the `filter` value changes from toolbar to calendar view
      *
-     * @controllable date
      */
-         onFilter: PropTypes.func,
+    onFilter: PropTypes.func,
+
+    /**
+     * Callback fired when listview is clicked
+     *
+     */
+    onListView: PropTypes.func,
+
+     /**
+     * function call to get all the filters
+     *
+     */
+    getFilters: PropTypes.func,
+
 
     /**
      * Callback fired when date header, or the truncated events links are clicked
@@ -1008,6 +1020,9 @@ class Calendar extends React.Component {
       messages: _2,
       culture: _3,
       onFilter,
+      onListView,
+      getFilters,
+      
       ...props
     } = this.props
 
@@ -1035,6 +1050,8 @@ class Calendar extends React.Component {
             onView={this.handleViewChange}
             onNavigate={this.handleNavigate}
             onFilter={onFilter}
+            onListView={onListView}
+            getFilters={getFilters}
             localizer={localizer}
           />
         )}

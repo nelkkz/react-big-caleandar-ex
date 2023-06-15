@@ -74,6 +74,9 @@ Toolbar.propTypes = {
   localizer: PropTypes.object,
   onNavigate: PropTypes.func.isRequired,
   onView: PropTypes.func.isRequired,
+  onFilter: PropTypes.func.isRequired,
+  onListView: PropTypes.func.isRequired,
+  getFilters: PropTypes.func.isRequired,
 }
 
 export default Toolbar
